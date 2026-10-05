@@ -3,6 +3,7 @@ message: "If you use this software, please cite it using the metadata below, and
 title: "Quartz BOSL relative sensitivity of Lx and Tx signals"
 version: 1.0.0
 date-released: "2026-10-05"
+doi: 10.5281/zenodo.23170566
 authors:
   - family-names: "Souza"
     given-names: "Priscila E."
