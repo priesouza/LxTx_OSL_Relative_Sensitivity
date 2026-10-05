@@ -6,6 +6,13 @@
 rm(list = ls())
 graphics.off()
 
+#-------------------------------------------------------------
+# LOAD NECESSARY PACKAGES
+#-------------------------------------------------------------
+# install.packages(c("Luminescence", "openxlsx", "dplyr","ggplot2"))
+
+library(Luminescence); library(openxlsx); library(dplyr); library(ggplot2)
+
 #---------------------------------------------------------
 # SET WORKING DIRECTORY & LOAD AUXILIARY EXCEL/CSV FILE
 #---------------------------------------------------------
