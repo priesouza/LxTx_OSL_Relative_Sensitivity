@@ -52,7 +52,7 @@ cd LxTx_OSL_Relative_Sensitivity
 This script is not organized as a callable function — it is meant to be edited and run as a whole.
 
 1. Open `LxTx_OSL_Relative_Sensitivity.R` in RStudio.
-2. Edit the parameters at the top of the script (lines 12–77) to match your data, settings, and your preferences:
+2. Edit the parameters at the top of the script (lines 19–84) to match your data, settings, and your preferences:
   
    - `path`: folder containing the `.binx` files and the auxiliary file named "files.info"
    - `input`: auxiliary file containing a list of .binx files that will be analysed and additional information about each .binx file 
