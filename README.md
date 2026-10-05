@@ -1,4 +1,5 @@
 # Quartz BOSL relative sensitivity of Lx and Tx signals
+**DOI:** [10.5281/zenodo.23170566](https://doi.org/10.5281/zenodo.23170566)
 
 ## Scope and intended use
 
