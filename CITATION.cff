@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below, and consider also citing the accompanying paper."
+title: "Quartz BOSL relative sensitivity of Lx and Tx signals"
+version: 1.0.0
+date-released: "2026-10-05"
+authors:
+  - family-names: "Souza"
+    given-names: "Priscila E."
+    orcid: "https://orcid.org/0000-0001-9975-2074"
+    affiliation: "Departamento de Geografia Física, Faculdade de Filosofia, Letras e Ciências Humanas, Universidade de São Paulo"
+repository-code: "https://github.com/priesouza/LxTx_OSL_Relative_Sensitivity"
+license: MIT
+keywords:
+  - geosciences
+  - OSL sensitivity
+  - sediment provenance analysis
+  - luminescence dating
+  - R
+preferred-citation:
+  type: article
+  title: "Using quartz OSL signals from SAR cycles for sediment provenance studies"
+  authors:
+    - family-names: "Souza"
+      given-names: "Priscila E."
+      orcid: "https://orcid.org/0000-0001-9975-2074"
+    - family-names: "Porat"
+      given-names: "Naomi"
+    - family-names: "Sawakuchi"
+      given-names: "André O."
+    - family-names: "Cruz"
+      given-names: "Carolina B.L."
+    - family-names: "Breda"
+      given-names: "Caio"
+    - family-names: "Rodrigues"
+      given-names: "Fernanda C.G."
+    - family-names: "Oliveira"
+      given-names: "Stefania C."
+    - family-names: "Pupim"
+      given-names: "Fabiano N."
+  journal: "Quaternary Geochronology"
+  year: 2024
+  volume: "83"
+  start: "101574"
+  doi: "10.1016/j.quageo.2024.101574"
