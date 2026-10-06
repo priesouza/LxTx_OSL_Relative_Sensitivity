@@ -147,10 +147,10 @@ bg.osl <- numeric(ncol(osl.signals))
 osl.total <- numeric(ncol(osl.signals))
 bg.total <- numeric(ncol(osl.signals))
 sens.osl <- numeric(ncol(osl.signals))
-osl <- numeric(ncol(osl.signals))
+osl <- osl.tot <- numeric(ncol(osl.signals))
 
-sd.bg.osl <- numeric(ncol(osl.signals))
-lower.limit <- numeric(ncol(osl.signals))
+sd.bg.osl <- lower.limit <- numeric(ncol(osl.signals))
+sd.bg.tot <- lower.limit.tot <- numeric(ncol(osl.signals))
 
 # IMPORTANT:
 # Start as NA, rather than as 1:length().
@@ -179,23 +179,24 @@ for (i in seq_along(osl.signals)) {
     osl.signals[, i][bg1:bg2]
   ) * length(1:bg2)
   
-  # Standard deviation of background
-  sd.bg.osl[i] <- sd(
-    osl.signals[, i][bg1:bg2]
-  )
+  # Standard deviation of background (i.e., √bg)
+  sd.bg.osl[i] <- sqrt(bg.osl[i])
+  sd.bg.tot[i] <- sqrt(bg.total[i])
   
-  # Lower detection limit
-  lower.limit[i] <- bg.osl[i] + (3 * sd.bg.osl[i])
+  # Lower detection limits
+  lower.limit[i] <- 3 * sd.bg.osl[i]
+  lower.limit.tot[i] <-  3 * sd.bg.tot[i]
   
   # Net OSL signal in the first second
   osl[i] <- osl.s[i] - bg.osl[i]
+  osl.tot[i] <- osl.total[i] - bg.total[i]
   
   # %BOSL1s
   sens.osl[i] <-
-    osl[i] / (osl.total[i] - bg.total[i]) * 100
+    osl[i] / osl.tot[i] * 100
   
   # Keep only signals above the detection limit
-  if (osl[i] >= lower.limit[i]) {
+  if ((osl[i]/lower.limit[i]) >= 1 &  (osl.tot[i]/lower.limit.tot[i]) >= 1) {
     sens[i] <- sens.osl[i]
   }
 }
